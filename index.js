@@ -21,7 +21,7 @@ app.post('/tts', (req, res) => {
 
   const filename = `audio-${Date.now()}.mp3`;
   const filepath = path.join(__dirname, 'public', filename);
-  const command = `edge-tts --text "${texto}" --write-media "${filepath}"`;
+  const command = `gtts-cli "${texto}" --lang pt --output "${filepath}"`;
 
   exec(command, (error) => {
     if (error) {
