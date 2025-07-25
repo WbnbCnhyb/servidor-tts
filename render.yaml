@@ -1,0 +1,3 @@
+prebuild:
+  commands:
+    - pip install edge-tts
